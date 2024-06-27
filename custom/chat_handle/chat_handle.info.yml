@@ -1,8 +1,0 @@
-name: 'Chat Handle'
-type: module
-description: 'Gestione chat/nuova chat/salva chat'
-core_version_requirement: "^10"
-package: 'Estensioni Custom'
-
-libraries:
-  - chat_handle/global-styling

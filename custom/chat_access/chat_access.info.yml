@@ -1,5 +1,0 @@
-name: 'Chat access'
-description: 'Gestione visualizzazione e accesso chat fiscalfocus'
-type: module
-core_version_requirement: "^10"
-package: 'Estensioni Custom'
