@@ -1,0 +1,6 @@
+name: Extend Twig
+description: Estensioni a Twig
+package: EstensioniCustom
+
+type: module
+core_version_requirement: "^10"

@@ -1,0 +1,24 @@
+{# {{ attach_library('chat_handle/global-styling') }}
+{{ attach_library('chat_handle/global-scripts') }} #}
+
+<div class="cp-user cp-user--login">
+    <div class="cp-user__inner-box">
+      <div class="cp-user__inner">
+        <div class="co-content__new-chat">
+          <div class="co-content__new-chat-titolo">
+              <p>
+                <strong>
+                  Scegli il titolo (o l'argomento) della nuova conversazione
+                </strong>
+              </p>
+              <p>
+                Potrai sempre modificarlo in seguito
+              </p>
+          </div>
+          <div class="co-content__new-chat-content">
+              {{ formNewChat }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

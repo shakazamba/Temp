@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Contains itcairoeditore.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\chat_handle\Utility\NodeUtility;
+use Drupal\file\Entity\File;
+
+function chat_handle_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the chat_handle module.
+        case 'help.page.chat_handle':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Modulo utilizzato per la gestione delle iscrizioni al premio arte.') . '</p>';
+            return $output;
+        default:
+    }
+}
+
+function chat_handle_theme($existing, $type, $theme, $path)
+{
+    $themes['chat_new'] = [
+        'render element' => 'children',
+        'variables' => array(
+            'formNewChat' => NULL,
+        ),
+    ];
+    $themes['chat_new_form'] = [
+        'render element' => 'form',
+    ];
+    $themes['chat_save'] = [
+        'render element' => 'children'
+    ];
+    $themes['chat_edit'] = [
+        'render element' => 'children'
+    ];
+
+    return $themes;
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+// function chat_handle_entity_postsave(Drupal\Core\Entity\EntityInterface $entity)
+// {
+//     switch ($entity->bundle()) {
+//         // Here you modify only your day content type
+//         case 'chat':
+//             drupal_set_message('Storico chat salvato correttamente', 'message');
+//             break;
+//     }
+// }
+// function chat_handle_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
+// {
+//     switch ($entity->bundle()) {
+//         // Here you modify only your day content type
+//         case 'chat':
+//             drupal_set_message('Storico chat salvato correttamente', 'message');
+//             break;
+//     }
+// }
